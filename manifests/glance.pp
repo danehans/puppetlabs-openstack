@@ -16,7 +16,6 @@
 # [registry_host] Address for Glance API to use for contacting the registry service.  Defaults to '0.0.0.0'
 # [bind_address] Address to bind Glance API and Registry services to.  Defaults to '0.0.0.0'
 # [keystone_host] Host whre keystone is running. Optional. Defaults to '127.0.0.1'
-# [auth_uri] URI used for auth. Optional. Defaults to "http://${keystone_host}:5000/"
 # [db_type] Type of sql databse to use. Optional. Defaults to 'mysql'
 # [glance_db_user] Name of glance DB user. Optional. Defaults to 'glance'
 # [glance_db_dbname] Name of glance DB. Optional. Defaults to 'glance'
@@ -43,7 +42,6 @@ class openstack::glance (
   $registry_host            = '0.0.0.0',
   $bind_address             = '0.0.0.0',
   $keystone_host            = '127.0.0.1',
-  $auth_uri                 = "http://127.0.0.1:5000/",
   $db_type                  = 'mysql',
   $glance_db_user           = 'glance',
   $glance_db_dbname         = 'glance',
