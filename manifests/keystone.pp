@@ -161,7 +161,6 @@ class openstack::keystone (
     debug          => $verbose,
     bind_host      => $bind_host,
     catalog_type   => 'sql',
-    #backend_driver => 'keystone.token.backends.sql.Token',
     admin_token    => $admin_token,
     enabled        => $enabled,
     sql_connection => $sql_conn,
