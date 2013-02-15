@@ -96,7 +96,7 @@ class openstack::keystone (
     $admin_real = $internal_real
   }
   if($glance_public_address) {
-    $glance_public_real = $glance_public_address
+    $glance_public_real = $public_public_address
   } else {
     $glance_public_real = $public_address
   }
@@ -159,9 +159,7 @@ class openstack::keystone (
   class { '::keystone':
     verbose        => $verbose,
     debug          => $verbose,
-    bind_host      => $bind_host,
     catalog_type   => 'sql',
-    #backend_driver => 'keystone.token.backends.sql.Token',
     admin_token    => $admin_token,
     enabled        => $enabled,
     sql_connection => $sql_conn,
